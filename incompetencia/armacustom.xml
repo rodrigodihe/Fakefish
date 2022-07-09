@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="armacustom" identifier="armacustom" tags="armacustom" category="Electrical,Machine" description="armacustom" scale="0.5" allowedlinks="gap,door" linkable="false" damagedbyexplosions="false" explosiondamagemultiplier="0.2">
+    <Sprite texture="%ModDir%/incompetencia/AlienRuins_Items.png" sourcerect="0,1776,185,96" depth="0.8" canflipx="false" origin="0.5,0.4" />
+  </Item>
+  <Item name="fakefish" identifier="fakefish" category="Electrical" Tags="smallitem,logic" maxstacksize="8" linkable="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true">
+    <PreferredContainer primary="reactorcab,storagecab" />
+    <PreferredContainer secondary="wreckreactorcab,wreckstoragecab,abandonedreactorcab" minamount="0" maxamount="1" spawnprobability="0.06" />
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="tin" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/incompetencia/signalcomp.png" sourcerect="512,900,63,54" origin="0.5,0.5" />
+    <Sprite texture="signalcomp.png" depth="0.8" sourcerect="128,128,32,32" origin="0.5,0.5" />
+    <MemoryComponent canbeselected="true" />
+    <Body width="31" height="25" density="30" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <requireditem items="wrench" type="Equipped" />
+    </Holdable>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <requireditem items="screwdriver" type="Equipped" />
+      <input name="signal_in" displayname="connection.signalin" />
+      <input name="lock_state" aliases="signal_store" displayname="connection.lockstate" />
+      <output name="signal_out" displayname="connection.signalout" />
+    </ConnectionPanel>
+  </Item>
+
+</Items>

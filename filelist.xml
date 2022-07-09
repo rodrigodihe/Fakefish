@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="[AH] Fakefish" modversion="1.0.36" corepackage="False" steamworkshopid="2816973290" gameversion="0.17.16.0">
+  <Submarine file="%ModDir%/[AH] Fakefish.sub" />
+  <Item file="%ModDir%/incompetencia/armacustom.xml" />
+</contentpackage>
